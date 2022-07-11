@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="1253.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainFormController">
+    <children>
+        <Pane prefHeight="569.0" prefWidth="1253.0">
+            <children>
+                <Text layoutX="51.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory Managment System" />
+                <Pane layoutX="77.0" layoutY="88.0" prefHeight="297.0" prefWidth="488.0" style="-fx-border-color: black; -fx-border-radius: 20;">
+                    <children>
+                        <Text layoutX="21.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Parts" wrappingWidth="37.40625" />
+                        <TextField fx:id="partSearchBar" layoutX="270.0" layoutY="19.0" prefHeight="30.0" prefWidth="209.0" promptText="Search by Part ID or Name" style="-fx-border-color: black; -fx-border-width: 1; -fx-border-radius: 10; -fx-background-radius: 10;" onAction="#searchForPart" />
+                        <TableView fx:id="partTable" layoutX="9.0" layoutY="49.0" prefHeight="200.0" prefWidth="474.0">
+                            <columns>
+                                <TableColumn fx:id="partIdCol" prefWidth="55.0" text="Part ID" />
+                                <TableColumn fx:id="partNameCol" prefWidth="157.0" text="Part Name" />
+                                <TableColumn fx:id="partInvCol" prefWidth="113.0" text="Inventory Level" />
+                                <TableColumn fx:id="partPriceCol" maxWidth="222.0" minWidth="-1.0" prefWidth="146.0" text="Price/ Cost per Unit" />
+                            </columns>
+                        </TableView>
+                        <Button fx:id="modifyBtnPart" layoutX="345.0" layoutY="260.0" mnemonicParsing="false" onAction="#modifyPart" style="-fx-background-color: #373F47; -fx-background-radius: 10;" text="Modify" textFill="WHITE" />
+                        <Button fx:id="deleteBtnPart" layoutX="410.0" layoutY="260.0" mnemonicParsing="false" onAction="#deletePart" style="-fx-background-color: #373F47; -fx-background-radius: 10;" text="Delete" textFill="WHITE" />
+                        <Button fx:id="addBtnPart" layoutX="295.0" layoutY="260.0" mnemonicParsing="false" onAction="#addPart" style="-fx-background-color: #373F47; -fx-background-radius: 10;" text="Add" textFill="WHITE" />
+                    </children></Pane>
+                <Pane layoutX="690.0" layoutY="88.0" prefHeight="297.0" prefWidth="488.0" style="-fx-border-color: black; -fx-border-radius: 20;">
+                    <children>
+                        <Text layoutX="21.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Products" wrappingWidth="78.40625" />
+                        <TextField fx:id="productSearchBar" layoutX="270.0" layoutY="19.0" prefHeight="30.0" prefWidth="209.0" promptText="Search by Product ID or Name" onAction="#searchForProduct" style="-fx-border-color: black; -fx-border-width: 1; -fx-border-radius: 10; -fx-background-radius: 10;" />
+                        <TableView fx:id="productTable" layoutX="9.0" layoutY="49.0" prefHeight="200.0" prefWidth="474.0">
+                            <columns>
+                                <TableColumn fx:id="productIdCol" prefWidth="82.0" text="Product ID" />
+                                <TableColumn fx:id="productNameCol" prefWidth="148.0" text="Product Name" />
+                                <TableColumn fx:id="productInvCol" prefWidth="119.0" text="Inventory Level" />
+                                <TableColumn fx:id="productPriceCol" maxWidth="222.0" minWidth="-1.0" prefWidth="122.0" text="Price/ Cost per Unit" />
+                            </columns>
+                        </TableView>
+                        <Button fx:id="modifyBtnProduct" layoutX="345.0" layoutY="260.0" mnemonicParsing="false" onAction="#modifyProduct" style="-fx-background-color: #373F47; -fx-background-radius: 10;" text="Modify" textFill="WHITE" />
+                        <Button fx:id="deleteBtnProduct" layoutX="410.0" layoutY="260.0" mnemonicParsing="false" onAction="#deleteProduct" style="-fx-background-color: #373F47; -fx-background-radius: 10;" text="Delete" textFill="WHITE" />
+                        <Button fx:id="addBtnProduct" layoutX="295.0" layoutY="260.0" mnemonicParsing="false" onAction="#addProduct" style="-fx-background-color: #373F47; -fx-background-radius: 10;" text="Add" textFill="WHITE" />
+                    </children>
+                </Pane>
+                <Button fx:id="exitBtn" layoutX="1140.0" layoutY="400.0" mnemonicParsing="false" onAction="#exitPressed" style="-fx-background-color: #373F47; -fx-background-radius: 10;" text="Exit" textFill="WHITE" />
+            </children>
+        </Pane>
+    </children>
+</VBox>
