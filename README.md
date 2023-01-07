@@ -1,5 +1,5 @@
 # Java-I-Project
-Inventory Management application developed for college course in Java. The applications main screen is composed of two menus, one for parts, and one for products made of those parts. Users are able to add, modify and delete parts as well as products. The application currently does not save the information entered, and so upon exiting the application, all data will be lost.
+Inventory Management application developed for college course in Java. The applications main screen is composed of two menus, one for parts, and one for products made of those parts. Users are able to add, modify and delete parts as well as products.
 
 ![1](https://user-images.githubusercontent.com/55116554/211131887-597136ed-3539-4731-bd62-45292a1bbddd.PNG)
 ![2](https://user-images.githubusercontent.com/55116554/211131894-2b3f6e3b-82b3-48ea-9f99-bc0499cf6b6b.PNG)
